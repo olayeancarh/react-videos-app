@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/react-videos-app/static/css/main.e0a37180.chunk.css",
+    "main.js": "/react-videos-app/static/js/main.d647ebed.chunk.js",
+    "main.js.map": "/react-videos-app/static/js/main.d647ebed.chunk.js.map",
+    "runtime~main.js": "/react-videos-app/static/js/runtime~main.d68c472a.js",
+    "runtime~main.js.map": "/react-videos-app/static/js/runtime~main.d68c472a.js.map",
+    "static/js/2.f6cf09dd.chunk.js": "/react-videos-app/static/js/2.f6cf09dd.chunk.js",
+    "static/js/2.f6cf09dd.chunk.js.map": "/react-videos-app/static/js/2.f6cf09dd.chunk.js.map",
+    "index.html": "/react-videos-app/index.html",
+    "precache-manifest.53d1615904b315f7d13167aad9d8d584.js": "/react-videos-app/precache-manifest.53d1615904b315f7d13167aad9d8d584.js",
+    "service-worker.js": "/react-videos-app/service-worker.js",
+    "static/css/main.e0a37180.chunk.css.map": "/react-videos-app/static/css/main.e0a37180.chunk.css.map"
+  }
+}
