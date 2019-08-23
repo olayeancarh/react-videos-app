@@ -1,11 +1,48 @@
-import React from 'react';
-import SearchBar from './SearchBar';
+import React from "react";
+import SearchBar from "./SearchBar";
+import VideoList from "./VideoList";
+import VideoDetail from "./VideoDetail";
+import youtube from "../apis/youtube";
 
 class App extends React.Component {
+  state = { videos: [], selectedVideo: null };
+
+  onFormSubmit = async search_term => {
+    const response = await youtube.get("/search", {
+      params: { q: search_term }
+    });
+
+    this.setState({
+      videos: response.data.items,
+      selectedVideo: response.data.items[0]
+    });
+  };
+
+  onVideoSelect = async video => {
+    this.setState({ selectedVideo: video });
+  };
+
+  componentDidMount() {
+    this.onFormSubmit('buildings');
+  }
+
   render() {
     return (
-      <div>
-        <SearchBar />
+      <div className="ui container">
+        <SearchBar onFormSubmit={this.onFormSubmit} />
+        <div className="ui grid">
+          <div className="ui row">
+            <div className="eleven wide column">
+              <VideoDetail video={this.state.selectedVideo} />
+            </div>
+            <div className="five wide column">
+              <VideoList
+                onVideoSelect={this.onVideoSelect}
+                videos={this.state.videos}
+              />
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
